@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Tech Shop{% endblock %}
+
+{% block content %}
+    <div class="main">
+        <div class="mainText">
+            <h1 class="heading">Welcome to Innovate Tech</h1>
+            <p>Your one-stop shop for the latest tech products.</p>
+            <button>Shop Now</button>
+        </div>
+        <div class="mainImage">
+            <img src="{{ url_for('static', filename='main.png') }}" alt="Tech Products">
+        </div>
+    </div>
+{% endblock %}

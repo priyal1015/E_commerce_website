@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Tech Shop{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo"> Innovate Tech</div>
+        <ul>
+            <li><a href="{{ url_for('index') }}" id="home">Home</a></li>
+            <li><a href="{{ url_for('shop') }}">Shop</a></li>
+            <li><a href="{{ url_for('about_us') }}">About Us</a></li>
+            <li><a href="{{ url_for('contact_us') }}">Contact Us</a></li>
+            <li class="search">
+                <input type="text" placeholder="Search...">
+                <button class="search-button"><i class="fas fa-search"></i></button>
+            </li>
+            <li><a href="#" class="add-to-cart"><i class="fas fa-shopping-cart"></i></a></li>
+            <li><a href="{{ url_for('login') }}" class="login-button">Login</a></li> <!-- Added Login button -->
+        </ul>
+    </nav>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer class="footer">
+        <div class="footerText">
+            <h1>Trends</h1>
+            <p>Service</p>
+            <p>Customer</p>
+            <p>Satisfaction</p>
+        </div>
+        <div class="footerText">
+            <h3>About Us</h3>
+            <p>Address: Lorem ipsum dolor sit amet,<br> consectetur adipisicing <br> Perferendis, excepturi alias.</p>
+            <p>Service</p>
+            <p>Customer</p>
+            <p>Satisfaction</p>
+        </div>
+        <div class="footerText">
+            <h3>Contact</h3>
+            <p>9989003229</p>
+            <p>Customer</p>
+            <p>Coming up...</p>
+            <p>New Arrival</p>
+        </div>
+        <div class="footerText">
+            <h3>Trending</h3>
+            <p>Service</p>
+            <p>Customer</p>
+            <p>Shops</p>
+            <p></p>
+        </div>
+        <div class="footerText">
+            <p>&copy; 2024 Tech Shop. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

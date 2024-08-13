@@ -1,0 +1,199 @@
+{% extends "base.html" %}
+
+{% block title %}Shop - Tech Shop{% endblock %}
+
+{% block content %}
+    <div class="shop-content">
+        <h1>Product Catalog</h1>
+        <div class="filter-sort-container">
+            <div class="filters">
+                <h3>Filters</h3>
+                <select id="category-filter">
+                    <option value="">All Categories</option>
+                    <option value="laptop">Laptops</option>
+                    <option value="headphone">Headphones</option>
+                    <option value="gaming-console">Gaming Consoles</option>
+                    <option value="hdd">HDDs</option>
+                    <option value="printer">Printers</option>
+                    <option value="webcam">Webcams</option>
+                    <option value="processor">Processors</option>
+                    <option value="dock">Docking Stations</option>
+                </select>
+                <select id="price-filter">
+                    <option value="">Price Range</option>
+                    <option value="0-5000">Up to ₹5000</option>
+                    <option value="5001-10000">₹5001 - ₹10000</option>
+                    <option value="10001-20000">₹10001 - ₹20000</option>
+                    <option value="20001-30000">₹20001 - ₹30000</option>
+                    <option value="30001-40000">₹30001 - ₹40000</option>
+                    <option value="40001-50000">₹40001 - ₹50000</option>
+                    <option value="50001">Above ₹50000</option>
+                </select>
+            </div>
+            <div class="sort">
+                <h3>Sort By</h3>
+                <select id="sort-by">
+                    <option value="popularity">Popularity</option>
+                    <option value="price-low-to-high">Price: Low to High</option>
+                    <option value="price-high-to-low">Price: High to Low</option>
+                    <option value="rating">Rating</option>
+                </select>
+            </div>
+        </div>
+        <div class="card-container">
+            <!-- Product Cards -->
+            <div class="crd">
+                <img src="{{ url_for('static', filename='laptop1.png') }}" alt="Laptop">
+                <div class="crdText">
+                    <h2>HP Laptop</h2>
+                    <p>HP Laptop 15, Intel® Core™ i5-1334U,15.6-inch(39.6 cm),FHD,16GB DDR4,512GB SSD,Dual Speakers,(Windows 11, MSO,Natural Silver, 1.59 kg),15-fd0316TU.</p>
+                    <p>₹55990</p>
+                    <button>Add to Cart</button>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="crd">
+                <img src="{{ url_for('static', filename='headphone1.png') }}" alt="Headphone">
+                <div class="crdText">
+                    <h2>Sony Headphone</h2>
+                    <p>Sony WH-1000XM4 Industry Leading Wireless Noise Cancellation Bluetooth Over Ear Headphones with Mic for Phone Calls, 30 Hours Battery Life, Quick Charge, AUX, Touch Control and Voice Control.</p>
+                    <p>₹19999</p>
+                    <button>Add to Cart</button>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="crd">
+                <img src="{{ url_for('static', filename='gamingconsole1.png') }}" alt="Gaming console">
+                <div class="crdText">
+                    <h2>Xbox Series S Gaming Console  </h2>
+                    <p>Next-gen performance in the smallest Xbox console ever.</p>
+                    <p>₹32999</p>
+                    <button>Add to Cart</button>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="crd">
+                <img src="{{ url_for('static', filename='hdd1.png') }}" alt="HDD">
+                <div class="crdText">
+                    <h2>Seagate HDD</h2>
+                    <p>Seagate expansion 1TB external HDD- USB 3.0 foe Windows and Mac with 3 yr data recovery services.</p>
+                    <p>₹5249</p>
+                    <button>Add to Cart</button>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="crd">
+                <img src="{{ url_for('static', filename='printer1.png') }}" alt="Printer">
+                <div class="crdText">
+                    <h2>Hp printer</h2>
+                    <p>Hp smart tank 589 AIO wifi color printer, upto 6000 black and 6000 color pages of in the box.</p>
+                    <p>₹12999</p>
+                    <button>Add to Cart</button>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div> 
+            <div class="crd">
+                <img src="{{ url_for('static', filename='webcam1.png') }}" alt="Webcam">
+                <div class="crdText">
+                    <h2>Lenovo Webcam</h2>
+                    <p>Lenovo 300 FHD Webcam with Full Stereo Dual Built-in mics , FHD 1080P 2.1 Megapixel CMOS Camera , Ultra-Wide 95 Lens, Digital Zoom, 360 Rotation,, Flexible Mount.</p>
+                    <p>₹2699</p>
+                    <button>Add to Cart</button>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div> 
+            <div class="crd">
+                <img src="{{ url_for('static', filename='intelprocessor1.png') }}" alt="Processor">
+                <div class="crdText">
+                    <h2>Intel Core processor</h2>
+                    <p>Intel core i7-12700K desktop processor 12 (8P+4E) cores up to 5,0 GHz unlocked LGA 1700 600 series chipset 125W.</p>
+                    <p>₹24690</p>
+                    <button>Add to Cart</button>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div> 
+            <div class="crd">
+                <img src="{{ url_for('static', filename='dockingstation1.png') }}" alt="Docking station">
+                <div class="crdText">
+                    <h2>Honeywell docking station</h2>
+                    <p>Honeywell Newly Launched 7-in-1 TypeC Docking Station with 4K HDMI,1xUSB 3.0,2xUSB 2.0 & TypeC 3.0 PD Charging 100W Port, SD & Micro SD Slot, for All Type C Devices- MacBook Laptop, PC, Thunderbolt 3.</p>
+                    <p>₹2100</p>
+                    <button>Add to Cart</button>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div> 
+            <div class="crd">
+                <img src="{{ url_for('static', filename='coolingpad1.png') }}" alt="Cooling pad">
+                <div class="crdText">
+                    <h2>Laptop cooling pad</h2>
+                    <p>CLAW Glacier F13 RGB Laptop Cooling Pad with 5 Turbo Fans, 7 Adjustable Height with Switch Control and LCD Screen | Black.</p>
+                    <p>₹1980</p>
+                    <button>Add to Cart</button>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div> 
+            <div class="crd">
+                <img src="{{ url_for('static', filename='keyboard1.png') }}" alt="Keyboard">
+                <div class="crdText">
+                    <h2>Logitech keyboard</h2>
+                    <p>Logitech Pebble Keys 2 K380s, Multi-Device Bluetooth Wireless Keyboard with Customisable Shortcuts, Slim and Portable, Easy-Switch for Windows, macOS, iPadOS, Android, Chrome OS - Tonal Rose.</p>
+                    <p>₹2995</p>
+                    <button>Add to Cart</button>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div> 
+            <div class="crd">
+                <img src="{{ url_for('static', filename='scanner1.png') }}" alt="Scanner">
+                <div class="crdText">
+                    <h2>Hp scanner</h2>
+                    <p>HP Scanjet Pro 2000 s2 Sheet-Feed Scanner.</p>
+                    <p>₹25000</p>
+                    <button>Add to Cart</button>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div> 
+            <div class="crd">
+                <img src="{{ url_for('static', filename='mouse1.png') }}" alt="Mouse">
+                <div class="crdText">
+                    <h2>Portronics Mouse</h2>
+                    <p>Portronics Toad One Bluetooth Mouse with 2.4 GHz & BT 5.3 Dual Wireless, 6 Buttons, Rechargeable, RGB Lights, Connect 3 Devices, Ergonomic Design for Laptop, Smartphone, Tablet (Black).</p>
+                    <p>₹550</p>
+                    <button>Add to Cart</button>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div> 
+            <div class="crd">
+                <img src="{{ url_for('static', filename='motherboard1.png') }}" alt="Motherboard">
+                <div class="crdText">
+                    <h2>Zebronics Motherboard</h2>
+                    <p>ZEBRONICS H61-NVMe Micro-ATX Motherboard for LGA 1155 Socket, Supports Intel 2nd & 3rd Generation Processors, M.2 Slot, 5.1 Audio, DDR3 1600 MHz, Ports (RJ45 | SATA | USB | HDMI).</p>
+                    <p>₹1370</p>
+                    <button>Add to Cart</button>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div> 
+            <div class="crd">
+                <img src="{{ url_for('static', filename='projector1.png') }}" alt="Projector">
+                <div class="crdText">
+                    <h2>E gate Projector</h2>
+                    <p>E Gate K9 Pro-Max Fully Automatic Smart Projector, 8400L & 700 ANSI | Full HD 1080p Native 4k Support | Auto Focus + Auto Keystone | 534cm Max Screen | HDMI, Dual WiFi & BT |.</p>
+                    <p>₹6599</p>
+                    <button>Add to Cart</button>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div> 
+            <div class="crd">
+                <img src="{{ url_for('static', filename='powersupplier1.png') }}" alt="Power supplier">
+                <div class="crdText">
+                    <h2>Ant Esports Non-modular power supplier</h2>
+                    <p>Ant Esports FP750B 80 Plus Bronze Certified Non Modular Gaming Power Supply/PSU with Active PFC, Flat Black Cables and Silent Fan.</p>
+                    <p>₹5599</p>
+                    <button>Add to Cart</button>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div> 
+            <!-- More products -->
+            
+        </div>
+    </div>
+{% endblock %}
